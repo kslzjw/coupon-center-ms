@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="coupon-calculation-api" />
+        <module name="coupon-customer-dao" />
+        <module name="coupon-template-dao" />
+        <module name="coupon-customer-impl" />
+        <module name="coupon-template-impl" />
+        <module name="coupon-customer-api" />
+        <module name="coupon-template-api" />
+        <module name="coupon-calculation-impl" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
