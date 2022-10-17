@@ -7,7 +7,7 @@ import org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
 
-// 注意这里不要写上@Configuration注解
+// 注意这里不要写上@Configuration注解，写上了@Configuration就是全局配置了
 public class CanaryRuleConfiguration {
 
     @Bean

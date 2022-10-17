@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 import static com.zjw.coupon.customer.constant.Constant.TRAFFIC_VERSION;
 
 // 可以将这个负载均衡策略单独拎出来，作为一个公共组件提供服务
+//金丝雀测试
 @Slf4j
 public class CanaryRule implements ReactorServiceInstanceLoadBalancer {
 
@@ -36,7 +37,7 @@ public class CanaryRule implements ReactorServiceInstanceLoadBalancer {
         this.serviceInstanceListSupplierProvider = serviceInstanceListSupplierProvider;
         position = new AtomicInteger(new Random().nextInt(1000));
     }
-
+    // 这个服务是Loadbalancer的标准接口，也是负载均衡策略选择服务器的入口方法
     @Override
     public Mono<Response<ServiceInstance>> choose(Request request) {
         ServiceInstanceListSupplier supplier = serviceInstanceListSupplierProvider
@@ -56,7 +57,7 @@ public class CanaryRule implements ReactorServiceInstanceLoadBalancer {
         }
         return serviceInstanceResponse;
     }
-
+    // 根据金丝雀的规则返回目标节点
     Response<ServiceInstance> getInstanceResponse(List<ServiceInstance> instances, Request request) {
         // 注册中心无可用实例 抛出异常
         if (CollectionUtils.isEmpty(instances)) {

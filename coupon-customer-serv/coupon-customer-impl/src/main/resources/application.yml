@@ -63,4 +63,5 @@ spring:
 logging:
   level:
     com.broadview.coupon: debug
-
+    com.zjw.coupon.customer.feign.TemplateService: debug
+    com.zjw.coupon.customer.feign.CalculationService: debug
