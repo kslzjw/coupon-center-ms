@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.Collection;
 import java.util.Map;
 
+//定义fallback类实现服务降级
 @Slf4j
 @Component
 public class TemplateServiceFallback implements TemplateService {

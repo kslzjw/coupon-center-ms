@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.Map;
 
 @FeignClient(value = "coupon-template-serv", path = "/template",
+//指定降级类或者降级工厂
 //        fallback = TemplateServiceFallback.class,
         fallbackFactory = TemplateServiceFallbackFactory.class)
 public interface TemplateService {
