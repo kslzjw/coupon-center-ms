@@ -21,6 +21,6 @@ public interface TemplateService {
 
     // 批量获取
     @GetMapping("/getBatch")
-    Map<Long, CouponTemplateInfo> getTemplateInBatch(@RequestParam("ids") Collection<Long> ids);
+        Map<Long, CouponTemplateInfo> getTemplateInBatch(@RequestParam("ids") Collection<Long> ids);
 
 }
