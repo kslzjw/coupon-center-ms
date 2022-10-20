@@ -22,7 +22,6 @@ import java.util.List;
 @RequestMapping("coupon-customer")
 public class CouponCustomerController {
 
-
     @Value("${disableCouponRequest:false}")
     private Boolean disableCoupon;
 
